@@ -53,7 +53,13 @@ static AppDelegate s_sharedApplication;
 
     return YES;
 }
-
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    if (interfaceOrientation == UIDeviceOrientationPortrait || interfaceOrientation ==UIDeviceOrientationPortraitUpsideDown) {
+        return YES;
+    }
+    return NO;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     /*

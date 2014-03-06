@@ -1,0 +1,41 @@
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/bin/FunnyPig.ap_ \
+ : /Users/huuthang/Documents/Dev/FunnyPig/proj.android/res/drawable-hdpi/icon.png \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/res/drawable-ldpi/icon.png \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/res/drawable-mdpi/icon.png \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/res/values/strings.xml \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/bin/res/drawable-hdpi/icon.png \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/bin/res/drawable-ldpi/icon.png \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/bin/res/drawable-mdpi/icon.png \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/blue.jpg \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/bottom.jpg \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/cancel1.png \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/cancel2.png \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/circle1.png \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/circle2.png \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/CloseNormal.png \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/CloseSelected.png \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/fonts \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/gray.png \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/green.jpg \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/HelloWorld.png \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/play view.JPG \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/purple.jpg \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/red.jpg \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/sad1.png \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/sad2.png \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/sad3.png \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/sad4.png \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/sad5.png \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/smile1.png \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/smile2.png \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/smile3.png \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/smile4.png \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/smile5.png \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/time.jpg \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/time_frame.png \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/top.jpg \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/wallpaper.jpg \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/white.jpg \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/fonts/Age.otf \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/assets/fonts/Marker Felt.ttf \
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/bin/AndroidManifest.xml \
