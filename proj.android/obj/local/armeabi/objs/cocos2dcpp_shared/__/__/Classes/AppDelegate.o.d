@@ -210,7 +210,9 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/AppDelegate.o: \
  /Users/huuthang/Documents/Dev/FunnyPig/proj.android/../cocos2d/cocos/2d/CCComponent.h \
  /Users/huuthang/Documents/Dev/FunnyPig/proj.android/../cocos2d/cocos/2d/CCComponentContainer.h \
  /Users/huuthang/Documents/Dev/FunnyPig/proj.android/../cocos2d/cocos/2d/CCDeprecated.h \
- jni/../../Classes/HelloWorldScene.h
+ jni/../../Classes/Splash.h jni/../../Classes/ViewResult.h \
+ /Users/huuthang/Documents/Dev/FunnyPig/proj.android/../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h \
+ /Users/huuthang/Documents/Dev/FunnyPig/proj.android/../cocos2d/cocos/audio/android/../include/Export.h
 
 jni/../../Classes/AppDelegate.h:
 
@@ -634,4 +636,10 @@ jni/../../Classes/AppDelegate.h:
 
 /Users/huuthang/Documents/Dev/FunnyPig/proj.android/../cocos2d/cocos/2d/CCDeprecated.h:
 
-jni/../../Classes/HelloWorldScene.h:
+jni/../../Classes/Splash.h:
+
+jni/../../Classes/ViewResult.h:
+
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h:
+
+/Users/huuthang/Documents/Dev/FunnyPig/proj.android/../cocos2d/cocos/audio/android/../include/Export.h:
