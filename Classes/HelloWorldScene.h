@@ -67,6 +67,8 @@ private:
     float scaleFactor;
     
     cocos2d::Sprite* background;
+    
+    cocos2d::Menu* btnReplay;
     /*
      array for sprite
      **/
@@ -80,6 +82,8 @@ public:
 
     // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
     virtual bool init();  
+    
+    //virtual bool keyBackClick(void);
     
     void onTouchesEnded(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event *unused_event);
     
@@ -106,6 +110,8 @@ public:
     
     
     void updateTimer(float dt);
+    
+    void endGame(float dt);
     
     void onButtonReplayClick(Object* sender);
     void onButtonExitClick(Object* sender);

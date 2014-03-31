@@ -29,6 +29,7 @@ bool GameHUD::init()
     scaleXFactor = frameSize.width/ 720;
     scaleYFactor = frameSize.height / 1280;
     time = 100;
+    maxTime = 100;
     timerBar = ProgressTimer::create(Sprite::create("time.jpg"));
     timerBar->setScale(scaleXFactor, scaleYFactor);
     timerBar->setType(ProgressTimer::Type::BAR);
@@ -44,20 +45,27 @@ bool GameHUD::init()
     timeFrameSprite->setPosition(timerBar->getPosition());
     this->addChild(timeFrameSprite);
     
-    levelLabel = LabelTTF::create("Level 1", "Marker Felt", 40);
+    levelLabel = LabelTTF::create("Level 1", "fonts/Softplain.ttf", 60);
     levelLabel->setPosition(timeFrameSprite->getPosition());
     levelLabel->setColor(Color3B(26, 192, 18));
     this->addChild(levelLabel);
     
-    scoreLabel = LabelTTF::create("0", "Marker Felt", 60);
-    scoreLabel->setPosition(visibleSize.width/2, scoreLabel->getContentSize().height);
-    scoreLabel->setColor(Color3B(50, 80, 255));
+    scoreLabel = LabelTTF::create("0", "fonts/Softplain.ttf", 100);
+    scoreLabel->setPosition(visibleSize.width/2, scoreLabel->getContentSize().height/2);
+    scoreLabel->setColor(Color3B(242, 196, 13));
     this->addChild(scoreLabel);
     
     return true;
     
 }
 
+void GameHUD::reset()
+{
+    time = maxTime;
+    _gameScore = 0;
+    this->updateLevel(1);
+    this->updateScore(0);
+}
 
 void GameHUD::updateTimerBar(int value)
 {
@@ -68,7 +76,8 @@ void GameHUD::updateTimerBar(int value)
 }
 void GameHUD::updateScore(int value)
 {
-    scoreLabel->setString(String::createWithFormat("%d", value)->getCString());
+    _gameScore = value;
+    scoreLabel->setString(String::createWithFormat("%d", _gameScore)->getCString());
 }
 void GameHUD::updateLevel(int value)
 {
