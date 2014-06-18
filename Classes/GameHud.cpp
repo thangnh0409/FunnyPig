@@ -23,25 +23,18 @@ GameHUD* GameHUD::shareInstance()
 bool GameHUD::init()
 {
     Size visibleSize = Director::getInstance()->getVisibleSize();
-    auto glView = EGLView::getInstance();
-    Size frameSize = glView->getFrameSize();
-    scaleFactor = MIN(frameSize.width/ 720, frameSize.height / 1280);
-    scaleXFactor = frameSize.width/ 720;
-    scaleYFactor = frameSize.height / 1280;
     time = 100;
     maxTime = 100;
     timerBar = ProgressTimer::create(Sprite::create("time.jpg"));
-    timerBar->setScale(scaleXFactor, scaleYFactor);
     timerBar->setType(ProgressTimer::Type::BAR);
     timerBar->setPercentage(time);
     //timerBar->setAnchorPoint(Point::ZERO);
     timerBar->setBarChangeRate(Point(1, 0));
     timerBar->setMidpoint(Point(0, 0.5f));
-    timerBar->setPosition(visibleSize.width/2, visibleSize.height - 160*scaleFactor);
+    timerBar->setPosition(visibleSize.width/2, visibleSize.height - 160);
     this->addChild(timerBar);
     
     auto timeFrameSprite = Sprite::create("time_frame.png");
-    timeFrameSprite->setScale(scaleXFactor, scaleYFactor);
     timeFrameSprite->setPosition(timerBar->getPosition());
     this->addChild(timeFrameSprite);
     

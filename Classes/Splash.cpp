@@ -1,5 +1,4 @@
 #include "Splash.h"
-#include "GameHud.h"
 #include "StartScreen.h"
 
 USING_NS_CC;
@@ -31,7 +30,6 @@ bool Splash::init()
     Point origin = Director::getInstance()->getVisibleOrigin();
 
     auto sprite = Sprite::create("startup.jpg");
-    sprite->setScale(GameHUD::shareInstance()->getScaleXFactor(), GameHUD::shareInstance()->getScaleYFactor());
     sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
 
     // add the sprite as a child to this layer

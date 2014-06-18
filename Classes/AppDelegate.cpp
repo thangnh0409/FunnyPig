@@ -20,12 +20,11 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     director->setOpenGLView(eglView);
 	
+    eglView->setDesignResolutionSize(720, 1280, ResolutionPolicy::EXACT_FIT);
+    
     // turn on display FPS
     director->setDisplayStats(false);
     
-    //Size framSize = eglView->getFrameSize();
-    
-    //director->setContentScaleFactor(MIN(1280 / 768, 720/432));
 
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);

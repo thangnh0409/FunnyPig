@@ -1,6 +1,5 @@
 #include "OptionScreen.h"
 #include "StartScreen.h"
-#include "GameHud.h"
 #include <SimpleAudioEngine.h>
 USING_NS_CC;
  
@@ -39,7 +38,6 @@ bool OptionScreen::init()
     auto sprite = Sprite::create("option.jpg");
 	sprite->setAnchorPoint(Point::ZERO);
     sprite->setPosition(0,0);
-    sprite->setScale(GameHUD::shareInstance()->getScaleXFactor(), GameHUD::shareInstance()->getScaleYFactor());
     // add the sprite as a child to this layer
     this->addChild(sprite, 0);
 
@@ -48,7 +46,7 @@ bool OptionScreen::init()
                                            "cancel1.png",
                                            "cancel2.png",
                                            CC_CALLBACK_1(OptionScreen::backToMenuCallback, this));
-	back->setScale(scale_button);
+//	back->setScale(scale_button);
 	back->setPosition(Point(origin.x + visibleSize.width - back->getContentSize().width ,
 		origin.y + visibleSize.height- 1.5f*back->getContentSize().height));
 	auto menuBack = Menu::create(back, NULL);
@@ -66,11 +64,11 @@ bool OptionScreen::init()
     menuMusic->setPosition(Point::ZERO);
     this->addChild(menuMusic, 1);
 
-	 music_on = Sprite::create("speaker_on.png");
-                music_on->setPosition(Point(origin.x + visibleSize.width/2 ,
+    music_on = Sprite::create("speaker_on.png");
+    music_on->setPosition(Point(origin.x + visibleSize.width/2 ,
 		origin.y + visibleSize.height/2- back->getContentSize().height));
-                music_on->setTag(100);
-                this->addChild(music_on);
+    music_on->setTag(100);
+    this->addChild(music_on);
     
     return true;
 }

@@ -22,7 +22,6 @@ bool ViewResult::init()
                                            "result.png",
                                            "result.png",
                                            CC_CALLBACK_1(ViewResult::backToMenuCallback, this));
-	resultDialog->setScale(GameHUD::shareInstance()->getScaleXFactor(), GameHUD::shareInstance()->getScaleYFactor());
 	resultDialog->setPosition(Point(origin.x+visibleSize.width/2,
 		origin.y + visibleSize.height/2));
 	auto menuResultDialog = Menu::create(resultDialog, NULL);
@@ -85,7 +84,6 @@ bool ViewResult::init()
                                            "facebook-share-button.png",
                                            "facebook-share-button.png",
                                            CC_CALLBACK_1(ViewResult::shareCallback, this));
-	share->setScale(GameHUD::shareInstance()->getScaleXFactor()-0.1, GameHUD::shareInstance()->getScaleYFactor()-0.1);
 	share->setPosition(resultDialog->getPosition() - Point(share->getContentSize().width/3*share->getScaleX() + resultDialog->getContentSize().width/4*resultDialog->getScaleX(), resultDialog->getContentSize().height/4*resultDialog->getScaleY() + share->getContentSize().height/3*share->getScaleY()));
 	auto menuShareDialog = Menu::create(share, NULL);
     menuShareDialog->setPosition(Point::ZERO);

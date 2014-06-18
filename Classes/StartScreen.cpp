@@ -48,7 +48,6 @@ bool StartScreen::init()
     auto sprite = Sprite::create("start.jpg");
 	sprite->setAnchorPoint(Point::ZERO);
     sprite->setPosition(0,0);
-    sprite->setScale(GameHUD::shareInstance()->getScaleXFactor(), GameHUD::shareInstance()->getScaleYFactor());
     // add the sprite as a child to this layer
     this->addChild(sprite, 0);
 
@@ -57,7 +56,6 @@ bool StartScreen::init()
                                            "about1.png",
                                            "about2.png",
                                            CC_CALLBACK_1(StartScreen::aboutCallback, this));
-	about->setScale(GameHUD::shareInstance()->getScaleXFactor(), GameHUD::shareInstance()->getScaleYFactor());
 	about->setPosition(Point(origin.x+ about->getContentSize().width/2*about->getScaleX() ,
                                 origin.y + about->getContentSize().height/2*getScaleY() ));
 	auto menuAbout = Menu::create(about, NULL);
@@ -69,7 +67,6 @@ bool StartScreen::init()
                                            "info1.png",
                                            "info2.png",
                                            CC_CALLBACK_1(StartScreen::infoCallback, this));
-	info->setScale(GameHUD::shareInstance()->getScaleXFactor(), GameHUD::shareInstance()->getScaleYFactor());
 	info->setPosition(Point(origin.x+visibleSize.width - info->getContentSize().width/2*info->getScaleX()  ,
                                 origin.y + info->getContentSize().height/2*info->getScaleY()));
 	auto menuInfo = Menu::create(info, NULL);
@@ -81,7 +78,6 @@ bool StartScreen::init()
                                            "play3.png",
                                            "play4.png",
                                            CC_CALLBACK_1(StartScreen::playCallback, this));
-	play->setScale(GameHUD::shareInstance()->getScaleXFactor(), GameHUD::shareInstance()->getScaleYFactor());
 	play->setPosition(Point(origin.x +visibleSize.width/2,
                                 origin.y + visibleSize.height/2));
 	auto menuPlay = Menu::create(play, NULL);
@@ -93,7 +89,6 @@ bool StartScreen::init()
                                            "option3.png",
                                            "option4.png",
                                            CC_CALLBACK_1(StartScreen::optionCallback, this));
-	option->setScale(GameHUD::shareInstance()->getScaleXFactor(), GameHUD::shareInstance()->getScaleYFactor());
 	option->setPosition(Point(play->getPosition() - Point(0, option->getContentSize().height*option->getScaleY() + 30)));
 	auto menuOption = Menu::create(option, NULL);
     menuOption->setPosition(Point::ZERO);
@@ -105,7 +100,6 @@ bool StartScreen::init()
                                            "info.png",
                                            "info.png",
                                            CC_CALLBACK_1(StartScreen::backToMenuCallback, this));
-	infoDialog->setScale(GameHUD::shareInstance()->getScaleXFactor(), GameHUD::shareInstance()->getScaleYFactor());
 	infoDialog->setPosition(Point(origin.x+visibleSize.width/2,origin.y + visibleSize.height/2));
 	auto menuInfoDialog = Menu::create(infoDialog, NULL);
     menuInfoDialog->setPosition(Point::ZERO);
@@ -118,7 +112,6 @@ bool StartScreen::init()
                                            "help.png",
                                            "help.png",
                                            CC_CALLBACK_1(StartScreen::backToMenuCallback, this));
-	helpDialog->setScale(GameHUD::shareInstance()->getScaleXFactor(), GameHUD::shareInstance()->getScaleYFactor());
 	helpDialog->setPosition(Point(origin.x+visibleSize.width/2,
 		origin.y + visibleSize.height/2));
 	auto menuHelpDialog = Menu::create(helpDialog, NULL);

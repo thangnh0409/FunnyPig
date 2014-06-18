@@ -50,34 +50,25 @@ bool HelloWorld::init()
     }
     
     visibleSize = Director::getInstance()->getVisibleSize();
-    auto glView = EGLView::getInstance();
-	Size frameSize = glView->getFrameSize();
-    scaleFactor = MIN(frameSize.width/ 720, frameSize.height / 1280);
     background = Sprite::create("wallpaper.jpg");
     background->setPosition(visibleSize.width/2, visibleSize.height/2);
-    background->setScale(GameHUD::shareInstance()->getScaleXFactor(), GameHUD::shareInstance()->getScaleYFactor());
-    log("content scale: %f", scaleFactor);
     this->addChild(background, 0);
     
     auto bottomSprite = Sprite::create("bottom.png");
-    bottomSprite->setScale(GameHUD::shareInstance()->getScaleXFactor(), GameHUD::shareInstance()->getScaleYFactor());
-    bottomSprite->setPosition(visibleSize.width/2, bottomSprite->getContentSize().height/2 * GameHUD::shareInstance()->getScaleYFactor());
+    bottomSprite->setPosition(visibleSize.width/2, bottomSprite->getContentSize().height/2);
     //bottomSprite->setAnchorPoint(Point::ZERO);
     this->addChild(bottomSprite, 0);
     
     auto topSprite = Sprite::create("top.jpg");
-    topSprite->setScale(GameHUD::shareInstance()->getScaleXFactor(), GameHUD::shareInstance()->getScaleYFactor());
-    topSprite->setPosition(visibleSize.width/2, visibleSize.height - topSprite->getContentSize().height/2 * GameHUD::shareInstance()->getScaleYFactor());
+    topSprite->setPosition(visibleSize.width/2, visibleSize.height - topSprite->getContentSize().height/2);
     this->addChild(topSprite, 0);
     
     auto exitItem = MenuItemImage::create("cancel1.png", "cancel2.png", CC_CALLBACK_1(HelloWorld::onButtonExitClick, this));
-    exitItem->setScale(GameHUD::shareInstance()->getScaleXFactor(), GameHUD::shareInstance()->getScaleYFactor());
     auto btnExit = Menu::create(exitItem, NULL);
     btnExit->setPosition(visibleSize.width - exitItem->getContentSize().width/2, visibleSize.height - exitItem->getContentSize().height/2);
     this->addChild(btnExit, 1);
     
     auto replayItem = MenuItemImage::create("circle1.png", "circle2.png", CC_CALLBACK_1(HelloWorld::onButtonReplayClick, this));
-    replayItem->setScale(GameHUD::shareInstance()->getScaleXFactor(), GameHUD::shareInstance()->getScaleYFactor());
     btnReplay = Menu::create(replayItem, NULL);
     btnReplay->setPosition(replayItem->getContentSize().width/2, visibleSize.height - replayItem->getContentSize().height/2);
     this->addChild(btnReplay, 1);
@@ -173,7 +164,7 @@ void HelloWorld::drawMap()
         gridNode = NodeGrid::create();
         this->addChild(gridNode, 5);
     }
-    float scaleFactor = GameHUD::shareInstance()->getScaleFactor();
+    float scaleFactor = 0.8;
     
     if (height > width) {
         switch (height) {
